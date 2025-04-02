@@ -75,10 +75,8 @@ const images = [
   // Initialize the first gallery
 updateImage(currentIndex);
 
-// --- New Code for the Medical Reference Gallery ---
-
-// Medical reference gallery images
-const medicalImages = [
+// 📘 Textbook Gallery images (pg177 to pg191)
+const textbookImages = [
   "assets/pg177.jpg",
   "assets/pg178.jpg",
   "assets/pg179.jpg",
@@ -93,7 +91,36 @@ const medicalImages = [
   "assets/pg188.jpg",
   "assets/pg189.jpg",
   "assets/pg190.jpg",
-  "assets/pg191.jpg",
+  "assets/pg191.jpg"
+];
+
+let textbookCurrentIndex = 0;
+
+const textbookGalleryImage = document.getElementById("gallery-image-textbook");
+const textbookPrevButton = document.getElementById("prev-textbook");
+const textbookNextButton = document.getElementById("next-textbook");
+const textbookGalleryCaption = document.getElementById("gallery-caption-textbook");
+
+function updateTextbookImage(index) {
+  textbookGalleryImage.src = textbookImages[index];
+  textbookGalleryImage.alt = `Textbook Frame ${index + 1}`;
+  textbookGalleryCaption.textContent = `${index + 1} of ${textbookImages.length}`;
+}
+
+textbookPrevButton.addEventListener("click", () => {
+  textbookCurrentIndex = (textbookCurrentIndex - 1 + textbookImages.length) % textbookImages.length;
+  updateTextbookImage(textbookCurrentIndex);
+});
+
+textbookNextButton.addEventListener("click", () => {
+  textbookCurrentIndex = (textbookCurrentIndex + 1) % textbookImages.length;
+  updateTextbookImage(textbookCurrentIndex);
+});
+
+updateTextbookImage(textbookCurrentIndex);
+
+// Medical reference gallery images
+const medicalImages = [
   "assets/PPH12.jpg",
   "assets/PPH14.jpg",
   "assets/PPH180.jpg",
