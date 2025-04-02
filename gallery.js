@@ -139,3 +139,57 @@ medicalNextButton.addEventListener("click", () => {
 
 // Initialize the medical gallery
 updateMedicalImage(medicalCurrentIndex);
+
+//VR Storyboard Gallery
+
+const vrStoryboardImages = [
+  "assets/Storyboard Pg 1.png",
+  "assets/Storyboard Pg 2.png",
+  "assets/Storyboard Pg 3.png",
+  "assets/Storyboard Pg 4.png",
+  "assets/Storyboard Pg 5.png",
+  "assets/Storyboard Pg 6.png",
+  "assets/Storyboard Pg 7.png",
+  "assets/Storyboard Pg 8.png",
+  "assets/Storyboard Pg 9.png",
+  "assets/Storyboard Pg 10.png",
+  "assets/Storyboard Pg 11.png",
+  "assets/Storyboard Pg 12.png",
+  "assets/Storyboard Pg 13.png",
+  "assets/Storyboard Pg 14.png",
+  "assets/Storyboard Pg 15.png",
+  "assets/Storyboard Pg 16.png",
+  "assets/Storyboard Pg 17.png",
+  "assets/Storyboard Pg 18.png",
+  "assets/Storyboard Pg 19.png",
+  "assets/Storyboard Pg 20.png"
+];
+
+
+let vrCurrentIndex = 0;
+
+const vrGalleryImage = document.getElementById("gallery-image-vr");
+const vrPrevButton = document.getElementById("prev-vr");
+const vrNextButton = document.getElementById("next-vr");
+const vrGalleryCaption = document.getElementById("gallery-caption-vr");
+
+// Function to update the displayed image for the VR storyboard gallery
+function updateVRImage(index) {
+  vrGalleryImage.src = vrStoryboardImages[index];
+  vrGalleryImage.alt = `VR Storyboard Frame ${index + 1}`;
+  vrGalleryCaption.textContent = `${index + 1} of ${vrStoryboardImages.length}`;
+}
+
+// Event listeners for VR storyboard gallery navigation buttons
+vrPrevButton.addEventListener("click", () => {
+  vrCurrentIndex = (vrCurrentIndex - 1 + vrStoryboardImages.length) % vrStoryboardImages.length;
+  updateVRImage(vrCurrentIndex);
+});
+
+vrNextButton.addEventListener("click", () => {
+  vrCurrentIndex = (vrCurrentIndex + 1) % vrStoryboardImages.length;
+  updateVRImage(vrCurrentIndex);
+});
+
+// Initialize the VR storyboard gallery
+updateVRImage(vrCurrentIndex);
