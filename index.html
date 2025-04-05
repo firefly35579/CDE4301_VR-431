@@ -75,13 +75,7 @@
               <a href="#sub-section-2-header-1">2.1. Subject Matter Research</a>
             </sl-tree-item>
             <sl-tree-item>
-              <a href="#sub-section-2-header-2">2.2. Unity Research and Familiarisation</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#sub-section-2-header-3">2.3. Storyboarding</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#sub-section-2-header-4">2.4 Iteration Procedure</a>
+              <a href="#sub-section-2-header-2">2.2. Storyboarding</a>
             </sl-tree-item>
           </sl-tree-item>
       
@@ -120,15 +114,24 @@
                 <a href="#sub-section-3-header-7-4">3.7.4 Data Analysis Feedback</a>
               </sl-tree-item>
             </sl-tree-item>
+            <sl-tree-item>
+              <a href="#sub-section-3-header-6">3.8. Hypothesis</a>
+            </sl-tree-item>
           </sl-tree-item>
       
           <sl-tree-item expanded>
             <a href="#section-header-4">4. VR Application Development - Iteration 2</a>
             <sl-tree-item>
-              <a href="#sub-section-4-header-1">4.1. Summary of Feedback and Improvements</a>
+              <a href="#sub-section-4-header-1">4.1. Summary of Feedback and Improvements Implemented</a>
             </sl-tree-item>
-            <sl-tree-item>
-              <a href="#sub-section-4-header-2">4.2. Improved User Study Plan</a>
+            <sl-tree-item expanded>
+              <a href="#sub-section-4-header-2">4.2 Improved User Study Plan</a>
+              <sl-tree-item>
+                <a href="#sub-section-4-header-2-1">4.2.1 Control Group Materials for Phase 1: Learn</a>
+              </sl-tree-item>
+              <sl-tree-item>
+                <a href="#sub-section-4-header-2-2">4.2.2 Control Group Materials for Phase 2: Practice</a>
+              </sl-tree-item>
             </sl-tree-item>
             <sl-tree-item>
               <a href="#sub-section-4-header-3">4.3. Iteration 2 Walkthrough</a>
@@ -173,9 +176,6 @@
                 <a href="#sub-section-5-header-7-1">5.7.1 App Design Feedback</a>
               </sl-tree-item>
             </sl-tree-item>
-            <sl-tree-item>
-              <a href="#sub-section-5-header-8">5.8. Revised Hypothesis</a>
-            </sl-tree-item>
           </sl-tree-item>
       
           <sl-tree-item expanded>
@@ -203,19 +203,16 @@
               <sl-tree-item>
                 <a href="#sub-section-6-header-6-2">6.6.2 App Design Feedback</a>
               </sl-tree-item>
-              <sl-tree-item>
-                <a href="#sub-section-6-header-6-3">6.6.3 User Study Design Feedback</a>
-              </sl-tree-item>
             </sl-tree-item>
           </sl-tree-item>
       
           <sl-tree-item expanded>
             <a href="#section-header-7">7. Results & Analysis</a>
             <sl-tree-item>
-              <a href="#sub-section-7-header-1">7.1. Summary of Feedback and Improvements</a>
+              <a href="#sub-section-7-header-1">7.1. Results</a>
             </sl-tree-item>
             <sl-tree-item>
-              <a href="#sub-section-7-header-2">7.2. Final Iteration Walkthrough</a>
+              <a href="#sub-section-7-header-2">7.2. Analysis</a>
             </sl-tree-item>
           </sl-tree-item>
       
@@ -228,10 +225,10 @@
               <a href="#sub-section-8-header-2">8.2. Project Limitations</a>
             </sl-tree-item>
             <sl-tree-item>
-              <a href="#sub-section-8-header-3">8.3. Conclusion</a>
+              <a href="#sub-section-8-header-3">8.3. Future Work & Recommendations</a>
             </sl-tree-item>
             <sl-tree-item>
-              <a href="#sub-section-8-header-4">8.4. Future Work & Recommendations</a>
+              <a href="#sub-section-8-header-4">8.4. Conclusion</a>
             </sl-tree-item>
           </sl-tree-item>
       
@@ -272,7 +269,9 @@ We would like to express our deepest thanks to Liu Chang, who has assisted us im
 
 We would like to express our gratitude to Cheng Haojie, who provided us with valuable assistance and suggestions to improve our project.
 
-Furthermore, we would like to express our great appreciation for Charmaine, who provided invaluable help and advice with our simulation.
+We would like to express our great appreciation for Charmaine, who provided invaluable help and advice with our simulation. 
+
+Furthermore, we would like to express our deepest thanks to all the users who took the time to participate in our user studies and provide helpful feedback.
         </p>
         </div>
       </div>
@@ -281,14 +280,13 @@ Furthermore, we would like to express our great appreciation for Charmaine, who 
       <sl-divider></sl-divider>
       <div>
         <div id="section-header-1">
-          <h2>1. Introduction</h2>
-          
+          <h2>1. Introduction</h2>          
         </div>
   
         <div id="sub-section-1-header-1">
           <h3>1.1. Problem Statement</h3>
           <p>
-            Postpartum Hemorrhage (PPH) is one of the most critical and life-threatening obstetric emergencies encountered in clinical practice. It is traditionally defined as a blood loss of more than 500 mL following vaginal delivery or more than 1,000 mL following cesarean delivery, with severe PPH involving blood loss greater than 1,500 mL or associated hemodynamic instability (Bienstock et al., 2021). PPH accounts for approximately 27% of all maternal deaths worldwide, making it the leading direct cause of maternal mortality globally (Say et al., 2024). Each year, about 14 million women experience PPH resulting in about 70,000 maternal deaths globally (WHO, 2023). The urgency and complexity of managing PPH require that healthcare professionals, particularly those in obstetrics and gynecology, be well-trained in recognizing early signs of excessive bleeding and executing prompt interventions. 
+            Postpartum Hemorrhage (PPH) is one of the most critical and life-threatening obstetric emergencies encountered in clinical practice. It is traditionally defined as a blood loss of more than 500 mL following vaginal delivery or more than 1,000 mL following cesarean delivery, with severe PPH involving blood loss greater than 1,500 mL or associated hemodynamic instability (Bienstock et al., 2021). PPH accounts for approximately 27% of all maternal deaths worldwide, making it the leading direct cause of maternal mortality globally (Say et al., 2024). Each year, about 14 million women experience PPH resulting in about 70,000 maternal deaths globally (WHO, 2023). The urgency and complexity of managing PPH require that healthcare professionals, particularly those in obstetrics and gynecology, be well-trained in recognizing early signs of excessive bleeding and executing prompt interventions.
           </p>
           <p>
             In Singapore, while maternal mortality rates are low compared to global averages, PPH remains a significant cause of maternal morbidity, contributing to emergency hysterectomies, ICU admissions, and long-term complications such as anemia, infection, and psychological trauma (De Silva et al., 2021). Studies have shown that up to 5% of deliveries worldwide result in PPH, with uterine atony being the most common cause, causing approximately 70% of all cases (Wormer et al., 2024).
@@ -330,13 +328,13 @@ Furthermore, we would like to express our great appreciation for Charmaine, who 
       <br />
       <sl-divider></sl-divider>
       <div>
-        <div id="section-header-3">
-          <h2>3. Literature Review and Theoretical Framework</h2>
+        <div id="section-header-2">
+          <h2>2. Design Strategy</h2>
           
         </div>
   
-        <div id="sub-section-3-header-1">
-          <h3>3.1 Cognitive Load Theory (CLT)</h3>
+        <div id="sub-section-2-header-1">
+          <h3>2.1 Subject Matter Research</h3>
           <p>
             CLT highlights the critical balance between working memory’s limitations and long-term memory’s capacity to store schemas. Effective learning occurs when instructional designs optimise cognitive load by minimising extraneous demands, enabling learners to focus on intrinsic and germane processes (Centre for Education Statistics and Evaluation [CESE], 2017). VR’s immersive and intuitive interfaces uniquely align with CLT principles by presenting complex medical scenarios in an engaging, contextually rich format. In the case of PPH, VR simulations minimise extraneous distractions present in a typical classroom, and direct learners’ attention to mastering essential decision-making processes. The multisensory inputs offered by VR create a highly engaging environment that reinforces cognitive schema acquisition (Fuoad et al., 2022). Such immersive learning environments have been shown to significantly reduce cognitive overload while promoting deeper retention of complex tasks, making VR a powerful tool for integrating CLT into medical education (Andersen et al., 2016).
   
@@ -345,8 +343,8 @@ Furthermore, we would like to express our great appreciation for Charmaine, who 
           
         </div>
   
-        <div id="sub-section-3-header-2">
-          <h3>3.2 Embodied Cognition</h3>
+        <div id="sub-section-2-header-2">
+          <h3>2.2 Storyboarding</h3>
           <p>
             Embodied cognition posits that cognitive processing is deeply rooted in the body’s physical interactions with its environment. This theory underscores the importance of active, experiential learning, suggesting that physical engagement enhances the depth and retention of knowledge (Skulmowski, 2018). VR bridges the gap between theoretical understanding and hands-on practice by allowing learners to “inhabit” the learning experience. In this case, managing a simulated PPH case in VR allows students to rehearse life-saving interventions, such as fundal massage and oxytocin administration, within a realistic but safe virtual environment. This hands-on, immersive approach strengthens neural connections associated with procedural tasks, bridging the gap between passive learning and active skill acquisition (Tene et al., 2024). Embodied experiences in VR have been shown to lead to enhanced problem-solving capabilities and long-term retention, emphasising its transformative potential in medical training (Steen et al., 2024).
           </p>
@@ -359,19 +357,35 @@ Furthermore, we would like to express our great appreciation for Charmaine, who 
       <br />
       <sl-divider></sl-divider>
       <div>
-        <div id="section-header-4">
-          <h2>4. Methodology </h2>
+        <div id="section-header-3">
+          <h2>3. VR Application Development – Iteration 1</h2>
         </div>
   
-        <div id="sub-section-4-header-1">
-          <h3>4.1 Research Design</h3>
+        <div id="sub-section-3-header-1">
+          <h3>3.1 Application Flow</h3>
           <p>
-            This study employs a quantitative-focused approach to comprehensively evaluate the effectiveness of VR in enhancing problem-solving skills among medical students. Participants will be randomly assigned to one of two groups, with randomisation stratified by variables such as prior clinical exposure and academic standing to ensure comparability between the two groups. The study aims to recruit a minimum of 50 participants, with an equal distribution across the VR and control groups, to achieve statistically meaningful results.
+            The application was initially structured such that each interaction question resided within its own Unity scene. These scenes were linked via a C# script that managed navigation using button-triggered scene transitions. However, this approach significantly increased the application’s file size and resulted in long build times – approximately ten minutes per build – which impeded rapid prototyping.
           </p>
+
+          <div class="centered-figure">
+            <img src="assets/Build Settings Scenes.jpg" alt="Build Settings Scenes" class="centered-image" />
+            <div class="image-caption">Figure 1: The Various Scenes in Our First Project File, as Shown in the Build Settings Window.</div>
+          </div>
+          
           <p>
-            In the VR group, participants will receive instruction on PPH management via a VR simulation. This approach emphasises the active acquisition of theoretical knowledge in a practical, dynamic environment.
+            To address this issue, we transitioned to a more efficient architecture by consolidating all interactions into a single scene. Each question was assigned a distinct canvas, and we toggled their visibility using GameObject.SetActive() in response to user input. This approach, combined with Unity’s XR Simple Interactable system, reduced the build time to approximately 30 seconds and enabled a more agile development cycle.
           </p>
           
+          <div class="centered-figure">
+            <img src="assets/Learner Project File Hierarchy.jpg" alt="Learner Project File Hierarchy" class="centered-image" />
+            <div class="image-caption">Figure 2: The Hierarchy of Our Leaner Project File, Using a New GameObject to House Various ‘Scenes’ within the Hierarchy of a Single Unity Scene.</div>
+          </div>
+
+          <div class="centered-figure">
+            <img src="assets/XR Simple Interactable.jpg" alt="XR Simple Interactable" class="centered-image" />
+            <div class="image-caption">Figure 3: The Components used to enable moving from one scene to the next using XR Simple Interactable</div>
+          </div>
+
           <p>
             Below is an image gallery showcasing the initial storyboard we made for VR PPH training in general in medical education.
           </p>
@@ -649,7 +663,13 @@ Furthermore, we would like to express our great appreciation for Charmaine, who 
           <p>
             By addressing critical gaps in current literature, the research focuses on collecting quantitative data that underscores VR’s potential to bridge the gap between theoretical learning and practical application, providing empirical evidence on its effectiveness in improving decision-making under pressure.
           </p>
-          <img src="Results Table.jpg" alt="Results Table" class="centered-image" />
+          <div class="centered-figure">
+            <img src="assets/Results Table.jpg" alt="Results Table" class="large-image" />
+            <div class="image-caption">Figure 1: User Study Results Table</div>
+          </div>
+          
+          
+          
         </div>
   
         <div id="sub-section-7-header-1">

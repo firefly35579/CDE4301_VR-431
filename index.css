@@ -88,3 +88,26 @@ p {
   max-width: 100%; /* Adjust this value to control the size */
   height: auto;
 }
+
+.large-image {
+  width: 200%;
+  max-width: 2400px
+  height: auto;
+  display: block;
+  margin: 40px auto;
+  border: 3px solid #aaa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.centered-figure {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.image-caption {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 8px;
+  font-style: italic;
+}
