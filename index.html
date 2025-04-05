@@ -348,43 +348,6 @@ Furthermore, we would like to express our deepest thanks to all the users who to
           <p>
             Embodied cognition posits that cognitive processing is deeply rooted in the body’s physical interactions with its environment. This theory underscores the importance of active, experiential learning, suggesting that physical engagement enhances the depth and retention of knowledge (Skulmowski, 2018). VR bridges the gap between theoretical understanding and hands-on practice by allowing learners to “inhabit” the learning experience. In this case, managing a simulated PPH case in VR allows students to rehearse life-saving interventions, such as fundal massage and oxytocin administration, within a realistic but safe virtual environment. This hands-on, immersive approach strengthens neural connections associated with procedural tasks, bridging the gap between passive learning and active skill acquisition (Tene et al., 2024). Embodied experiences in VR have been shown to lead to enhanced problem-solving capabilities and long-term retention, emphasising its transformative potential in medical training (Steen et al., 2024).
           </p>
-          <p>
-            The integration of Cognitive Load Theory and Embodied Cognition forms a robust theoretical foundation for VR-based medical education. By leveraging VR’s immersive capabilities, this approach optimises cognitive resources, engages sensory-motor systems, and fosters structured problem-solving skills. These elements collectively enable medical students to transition from passive theoretical learning to active, experiential mastery, ensuring readiness for real-world clinical challenges and contributing to improved patient care outcomes.
-          </p>
-        </div>
-      </div>
-  
-      <br />
-      <sl-divider></sl-divider>
-      <div>
-        <div id="section-header-3">
-          <h2>3. VR Application Development – Iteration 1</h2>
-        </div>
-  
-        <div id="sub-section-3-header-1">
-          <h3>3.1 Application Flow</h3>
-          <p>
-            The application was initially structured such that each interaction question resided within its own Unity scene. These scenes were linked via a C# script that managed navigation using button-triggered scene transitions. However, this approach significantly increased the application’s file size and resulted in long build times – approximately ten minutes per build – which impeded rapid prototyping.
-          </p>
-
-          <div class="centered-figure">
-            <img src="assets/Build Settings Scenes.jpg" alt="Build Settings Scenes" class="centered-image" />
-            <div class="image-caption">Figure 1: The Various Scenes in Our First Project File, as Shown in the Build Settings Window.</div>
-          </div>
-          
-          <p>
-            To address this issue, we transitioned to a more efficient architecture by consolidating all interactions into a single scene. Each question was assigned a distinct canvas, and we toggled their visibility using GameObject.SetActive() in response to user input. This approach, combined with Unity’s XR Simple Interactable system, reduced the build time to approximately 30 seconds and enabled a more agile development cycle.
-          </p>
-          
-          <div class="centered-figure">
-            <img src="assets/Learner Project File Hierarchy.jpg" alt="Learner Project File Hierarchy" class="centered-image" />
-            <div class="image-caption">Figure 2: The Hierarchy of Our Leaner Project File, Using a New GameObject to House Various ‘Scenes’ within the Hierarchy of a Single Unity Scene.</div>
-          </div>
-
-          <div class="centered-figure">
-            <img src="assets/XR Simple Interactable.jpg" alt="XR Simple Interactable" class="centered-image" />
-            <div class="image-caption">Figure 3: The Components used to enable moving from one scene to the next using XR Simple Interactable</div>
-          </div>
 
           <p>
             Below is an image gallery showcasing the initial storyboard we made for VR PPH training in general in medical education.
@@ -425,17 +388,196 @@ Furthermore, we would like to express our deepest thanks to all the users who to
           <p>
             In the control group, participants will receive traditional lecture-based instruction, focusing on the theoretical principles of PPH management and problem-solving strategies. This method mirrors the conventional approach in medical education, providing a benchmark for comparing the efficacy of VR-based learning.
           </p>
-  
+
           <p>
-            To ensure comparability, identical pre- and post-assessments—structured around Polya’s Problem-Solving Framework—will be administered to both groups. In these assessments, participants will work through PPH scenarios in which they must understand the problem, devise a plan, execute that plan, and evaluate the result. The test measures students’ problem-solving efficiency in systematically diagnosing and addressing the underlying cause of haemorrhage.        </p>
-          
-          <a href="https://raw.githubusercontent.com/Triminac/VR-431/main/assets/Post-Learning Test.pdf" target="_blank">View the PDF</a>
-          <a href="https://raw.githubusercontent.com/Triminac/VR-431/main/assets/Post-Learning Test.pdf" download>Download the PDF</a>
+            The integration of Cognitive Load Theory and Embodied Cognition forms a robust theoretical foundation for VR-based medical education. By leveraging VR’s immersive capabilities, this approach optimises cognitive resources, engages sensory-motor systems, and fosters structured problem-solving skills. These elements collectively enable medical students to transition from passive theoretical learning to active, experiential mastery, ensuring readiness for real-world clinical challenges and contributing to improved patient care outcomes.
+          </p>
+        </div>
+      </div>
   
-  
-  
+      <br />
+      <sl-divider></sl-divider>
+      <div>
+        <div id="section-header-3">
+          <h2>3. VR Application Development – Iteration 1</h2>
         </div>
   
+        <div id="sub-section-3-header-1">
+          <h3>3.1 Application Flow</h3>
+          <p>
+            The application was initially structured such that each interaction question resided within its own Unity scene. These scenes were linked via a C# script that managed navigation using button-triggered scene transitions. However, this approach significantly increased the application’s file size and resulted in long build times – approximately ten minutes per build – which impeded rapid prototyping.
+          </p>
+
+          <div class="centered-figure">
+            <img src="assets/Build Settings Scenes.jpg" alt="Build Settings Scenes" class="centered-image" />
+            <div class="image-caption">Figure 1: The Various Scenes in Our First Project File, as Shown in the Build Settings Window.</div>
+          </div>
+          
+          <p>
+            To address this issue, we transitioned to a more efficient architecture by consolidating all interactions into a single scene. Each question was assigned a distinct canvas, and we toggled their visibility using GameObject.SetActive() in response to user input. This approach, combined with Unity’s XR Simple Interactable system, reduced the build time to approximately 30 seconds and enabled a more agile development cycle.
+          </p>
+          
+          <div class="centered-figure">
+            <img src="assets/Learner Project File Hierarchy.jpg" alt="Learner Project File Hierarchy" class="centered-image" />
+            <div class="image-caption">Figure 2: The Hierarchy of Our Leaner Project File, Using a New GameObject to House Various ‘Scenes’ within the Hierarchy of a Single Unity Scene.</div>
+          </div>
+
+          <div class="centered-figure">
+            <img src="assets/XR Simple Interactable.jpg" alt="XR Simple Interactable" class="centered-image" />
+            <div class="image-caption">Figure 3: The Components used to enable moving from one scene to the next using XR Simple Interactable</div>
+          </div>
+        </div>
+  
+        <div id="sub-section-3-header-2">
+          <h3>3.2 Unity Set-Up</h3>
+          <p>
+            Our initial development began with a Unity project inherited from a prior research fellow. This project, however, was burdened with numerous complex plugins and packages, leading to over 80 compilation errors. 
+          </p>
+
+          <div class="centered-figure">
+            <img src="assets/3.2 1.jpg" alt="Original Project File" class="centered-image" />
+            <div class="image-caption">Figure 4: The Original Project File with 80+ Compilation Errors</div>
+          </div>
+
+          <p>
+            After consulting with researchers at the Immersive Reality Lab, we followed a recommended clean setup process outlined in a set of slides, creating a fresh Unity project with only essential packages and plugins. This approach greatly simplified debugging and streamlined subsequent development.
+          </p>
+        </div>
+
+        <div id="sub-section-3-header-3">
+          <h3>3.3 Ensuring Accurate-to-Life Scale</h3>
+          <p>
+            To maintain realism, we benchmarked our VR environment against the Apartment Kit sample scene, which had already been calibrated for accurate real-world scaling. 
+          </p>
+
+          <div class="centered-figure">
+            <img src="assets/3.3 1.png" alt="Apartment Kit" class="centered-image" />
+            <div class="image-caption">Figure 5: The Apartment Kit sample environment used to scale our own app.</div>
+          </div>
+
+          <p>
+            We calibrated our assets accordingly, referencing physical items such as counters available in our homes, to ensure immersive and believable spatial proportions.
+          </p>
+        </div>
+
+        <div id="sub-section-3-header-4">
+          <h3>3.4 Assembling Delivery Ward Environment</h3>
+          <p>
+            The environment design prioritised a balance between realism and clarity. We used assets commissioned by previous student teams to assemble a scene that closely resembled a delivery ward while remaining visually uncluttered. This allowed users to focus on the training objective without unnecessary distractions
+          </p>
+
+          <div class="centered-figure">
+            <img src="assets/3.4 1.png" alt="Delivery Ward Environment" class="centered-image" />
+            <div class="image-caption">Figure 6: The delivery ward environment created using previously-commissioned assets. </div>
+          </div>
+        </div>
+
+        <div id="sub-section-3-header-5">
+          <h3>3.5 App Functionality: Poke Interactable</h3>
+          <p>
+            We adopted Unity’s XR Poke Interactable system, as demonstrated in a YouTube tutorial (Fist Full of Shrimp, 2023), to implement poke interactions. This required the configuration of a box collider, an XR Poke Filter specifying poke direction, as well as XR Simple Interactable for triggering responses (e.g., canvas transitions or sound playback).
+          </p>
+        </div>
+
+        <div id="sub-section-3-header-6">
+          <h3>3.6 Iteration 1 Walkthrough</h3>
+          <p>
+            The completed flow featured multiple canvases representing sequential questions. Users navigated through them using poke-enabled buttons. The demonstration video is as shown.
+          </p>
+          <video-component 
+          tag="VR Video 1" 
+          source="https://youtu.be/embed/M-aJXEX1Msw"
+          subtitle="Iteration 1"
+          ></video-component>
+        </div>
+
+        <div id="sub-section-3-header-7">
+          <h3>3.7 Preliminary User Testing</h3>
+          <p>
+            Feedback was obtained through a pilot session with Immersive Reality Lab members Liu Chang and Haojie. Their insights informed several critical design and usability improvements.
+          </p>
+
+          <div class="centered-figure">
+            <img src="assets/3.7 1.jpg" alt="Liu Chang" class="centered-image" />
+            <div class="image-caption">Figure 7: Immersive reality expert, Liu Chang, trying our app during the preliminary testing round. </div>
+          </div>
+        </div>
+
+        <div id="sub-section-3-header-7-1">
+          <h3>3.7.1 Usability Feedback</h3>
+          <video-component 
+          tag="Z-fighting" 
+          source="https://youtu.be/embed/M-aJXEX1Msw"
+          subtitle="Z-fighting Clip"
+          ></video-component>
+          <p>
+            Z-fighting on walls needed correction. This caused the wall to glitch throughout the user’s experience, leading to visual discomfort.
+
+            Furthermore, the resolution for the UI elements was low, leading to pixelated edges and corners.
+            
+            Excessive gaze movement between UI and in-scene objects reduced user comfort and focus. 
+          </p>
+        </div>
+
+        <div id="sub-section-3-header-7-2">
+          <h3>3.7.2 App Design Feedback</h3>
+          <div class="centered-figure">
+            <img src="assets/3.7.2 1.png" alt="Confusing Feedback Text" class="centered-image" />
+            <div class="image-caption">Figure 8: Original confusing feedback text. </div>
+          </div>
+          <p>
+            Feedback messaging was generic and not tailored to the type of error (e.g., over- vs underestimation of blood loss). Our users recommended context-sensitive messaging for greater educational value. 
+          </p>
+          <div class="centered-figure">
+            <img src="assets/3.7.2 2.png" alt="Original Summary Panel" class="centered-image" />
+            <div class="image-caption">Figure 9: Original summary panel shown after the user inputs their answer, showing the breakdown of assets present in the scene. </div>
+          </div>
+          <p>
+            Our users also noted that asset icons on the summary panel were not to scale, potentially misleading users. 
+          </p>
+        </div>
+
+        <div id="sub-section-3-header-7-3">
+          <h3>3.7.3 User Study Design Feedback</h3>
+          <p>
+            Initially, due to a limited timeframe and lack of access to relevant medical students for user testing, we were faced with the issue of a small sample size for our user validation studies. Therefore, we planned to simply gather qualitative user feedback on our application, and progressively iterate on the application using this feedback.
+          </p>
+          <p>
+            However, our study participants proposed a more structured comparison between an experimental group undergoing VR training and a control group receiving the textbook training that medical students are currently undergoing.  At the end, both control and experimental groups would undergo the same in-person test, using life-sized physical assets mimicking the appearance of the blood collection instruments. Through data collection and statistical analysis, meaningful connections or interesting trends may arise. 
+          </p>
+        </div>
+
+        <div id="sub-section-3-header-7-4">
+          <h3>3.7.4 Data Analysis Feedback</h3>
+          <p>
+            Our participants advised tracking response accuracy and completion time per question, visualised through boxplots. They recommended comparing distributions between control and experimental groups to assess learning efficacy.
+          </p>
+        </div>
+
+        <div id="sub-section-3-header-8">
+          <h3>3.8 Hypothesis</h3>
+          <p>
+            After this first round of preliminary testing, we came up with a hypothesis: participants exposed to the VR simulation would demonstrate higher accuracy and faster response times when estimating postpartum blood loss than those trained using traditional materials.
+          </p>
+        </div>
+
+        <br />
+      <sl-divider></sl-divider>
+      <div>
+        <div id="section-header-4">
+          <h2>4. VR Application Development – Iteration 2</h2>
+        </div>
+
+        <div id="sub-section-4-header-1">
+          <h3>4.1 Summary of Feedback and Improvements Implemented</h3>
+        </div>
+        <p>
+          Due to time constraints – specifically, the user study scheduled just 12 hours after the previous feedback session – not all of their suggestions could be implemented in Iteration 2. However, these recommendations were subsequently addressed in Iteration 3. The following table outlines only those improvements that were incorporated into Iteration 2.
+        </p>
+        <div class="centered-figure">
+          <img src="assets/4.1 1.jpg" alt="Summary of Feedback and Improvements" class="centered-image" />
+        </div>
+
         <div id="sub-section-4-header-2">
           <h3>4.2 Participant Selection Criteria</h3>
           <p>
@@ -479,11 +621,7 @@ Furthermore, we would like to express our deepest thanks to all the users who to
               <strong>Minimal Risk:</strong> The study was designed to mitigate risks, including motion sickness and stress from VR simulations, with facilitators available for immediate support.
             </li>
           </ul>
-          <p>
-            You may download the participant consent form to be used below:
-          </p>
-          <a href="https://raw.githubusercontent.com/Triminac/VR-431/main/assets/CDE431 Participant Research Form.pdf" target="_blank">View the PDF</a>
-          <a href="https://raw.githubusercontent.com/Triminac/VR-431/main/assets/CDE431 Participant Research Form.pdf" download>Download the PDF</a>
+          
         </div>
   
         <div id="sub-section-4-header-3">
@@ -573,11 +711,7 @@ Furthermore, we would like to express our deepest thanks to all the users who to
             </li>
           </ul>
         
-          <video-component 
-          tag="VR Video 1" 
-          source="https://youtu.be/embed/M-aJXEX1Msw"
-          subtitle="Iteration 1"
-      ></video-component>
+     
 
           <video-component 
           tag="VR Video 2" 
@@ -667,7 +801,10 @@ Furthermore, we would like to express our deepest thanks to all the users who to
             <img src="assets/Results Table.jpg" alt="Results Table" class="large-image" />
             <div class="image-caption">Figure 1: User Study Results Table</div>
           </div>
-          
+          <p>
+            You may download the user test results below:
+          </p>
+          <a href="https://raw.githubusercontent.com/firefly35579/CDE4301_VR-431/main/assets/VR User Test Results.xlsx" download>Download the User Test Results</a>
           
           
         </div>
