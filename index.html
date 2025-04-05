@@ -626,8 +626,9 @@ Furthermore, we would like to express our deepest thanks to all the users who to
             </div>
             <div class="centered-figure">
               <img src="assets/4.2.2 5.jpg" alt="Practice Handout 5" class="centered-image" />
+              <div class="image-caption">Figure 12: The ‘Phase 2’ document provided to control group participants.</div>
             </div>
-            <div class="image-caption">Figure 12: The ‘Phase 2’ document provided to control group participants.</div>
+            
 
 
         <div id="sub-section-4-header-3">
@@ -650,8 +651,8 @@ Furthermore, we would like to express our deepest thanks to all the users who to
           </p>
           <div class="centered-figure">
             <img src="assets/4.4 1.jpg" alt="User Study Round 1" class="centered-image" />
+            <div class="image-caption">Figure 13: Participants engaged in the VR simulation during the first round of user testing.</div>
           </div>
-          <div class="image-caption">Figure 13: Participants engaged in the VR simulation during the first round of user testing</div>
         </div>
   
         <div id="sub-section-4-header-4-1">
@@ -669,57 +670,96 @@ Furthermore, we would like to express our deepest thanks to all the users who to
           </p>
         </div>
 
-
-        <div id="sub-section-4-header-5">
-          <h3>4.5 Statistical Analysis</h3>
+        <div id="sub-section-4-header-4-2">
+          <h3>4.4.2 App Design Feedback</h3>
           <p>
-            A rigorous statistical analysis framework will be employed to ensure the reliability and validity of the findings:
+            Some participants reported difficulty viewing assets placed on the floor, which impaired their ability to judge the items’ size. They suggested enabling the ability to pick up and inspect these assets up close to improve understanding.
           </p>
-        
-          <ul>
-            <li>
-              <strong>Descriptive Statistics:</strong> To summarise the central tendencies (mean, median) and variability (standard deviation) within each group.
-            </li>
-            <li>
-              <strong>Inferential Statistics:</strong> Independent samples t-tests will compare the means of the VR and control groups for each performance metric, identifying statistically significant differences. Additionally, Analysis of Variance (ANOVA) will be used to examine interactions between instructional methods and participant demographics, such as prior medical knowledge.
-            </li>
-            <li>
-              <strong>Reliability Analysis:</strong> Cronbach’s alpha (≥0.7 threshold) will assess the internal consistency of the assessment instruments, ensuring that the measurements are robust and reliable.
-            </li>
-            <li>
-              <strong>Outlier Management:</strong> Standardised residuals will be calculated to detect and address outliers, ensuring data integrity. Sensitivity analyses will further validate findings by testing the robustness of results under different assumptions.
-            </li>
-          </ul>
-        
           <p>
-            This analytical approach not only provides robust statistical validation but also enables a comprehensive understanding of the factors influencing problem-solving performance, ensuring that the results are both reliable and generalisable.
+            Additionally, participants commented that the lack of haptic feedback diminished the intuitiveness of the interface. They recommended incorporating auditory feedback – such as sound effects – to compensate for the absence of tactile responses during interactions.
           </p>
-  
         </div>
-      </div>
+
+        <div id="sub-section-4-header-4-3">
+          <h3>4.4.3 User Study Design Feedback</h3>
+          <p>
+            Feedback indicated that the physical objects used during Phase 3 (Test) did not sufficiently resemble the digital assets presented during the Learn and Practice phases. This lack of visual similarity hindered participants’ ability to apply their learning during the test.
+          </p>
+          <div class="centered-figure">
+            <img src="assets/4.4.3 1.jpg" alt="Original Physical Assets" class="centered-image" />
+            <div class="image-caption">Figure 14: The original style of assets used for Phase 3: Test.</div>
+          </div>
+        </div>
   
       <br />
       <sl-divider></sl-divider>
       <div>
         <div id="section-header-5">
-          <h2>5. Anticipated Results </h2>
+          <h2>5. VR Application Development – Iteration 3</h2>
+        </div>
+  
+        <div id="sub-section-5-header-1">
+          <h3>5.1 Summary of Feedback and Improvements</h3>
           <p>
-            This study hypothesises that participants in the Virtual Reality (VR) group will exhibit superior performance across all evaluated metrics compared to the control group. Specifically, we anticipate the following outcomes:
+            In this iteration, we implemented additional improvements based on the feedback provided by Liu Chang, Haojie, and the participants from the first user study.
           </p>
+          <div class="centered-figure">
+            <img src="assets/5.1 1.png" alt="Summary of Feedback and Improvements Section 5." class="centered-image" />
+          </div>
+        </div>
         
-          <ul>
-            <li>
-              <strong>Enhanced Problem-Solving Efficiency:</strong> VR participants are expected to demonstrate an ability to navigate complex scenarios with fewer steps and minimal errors, reflecting enhanced cognitive schema development. The realistic and interactive nature of VR provides a platform allowing learners to internalise systematic approaches to clinical challenges more effectively than traditional lecture-based methods (Plackett et al., 2022). This efficiency is particularly critical in high-pressure situations like PPH, where swift and accurate decisions can significantly impact patient outcomes.
-            </li>
-            <li>
-              <strong>Accelerated Response Times:</strong> Immersive VR environments simulate the urgency of real-world medical emergencies, training participants to process information and make decisions under pressure (Mergen et al., 2024). This hands-on exposure is anticipated to develop quicker cognitive reflexes, better preparing participants to respond promptly and effectively in actual clinical scenarios (Einloft et al., 2024).
-            </li>
-            <li>
-              <strong>Reduced Dependence on External Hints:</strong> By fostering a deeper understanding of clinical decision-making through experiential learning, VR is expected to boost participants’ confidence and independence. This reduction in reliance on external prompts during problem-solving tasks reflects an increased capacity for autonomous reasoning, a critical competency in unpredictable, high-stakes medical settings.
-            </li>
-          </ul>
-        
-     
+        <div id="sub-section-5-header-2">
+          <h3>5.2 App Functionality: Grab Interactable</h3>
+          <div class="centered-figure">
+            <img src="assets/5.2 1.png" alt="Grab Interaction Menu" class="centered-image" />
+            <div class="image-caption">Figure 15: The Meta XR Tools Grab Interaction Menu.</div>
+          </div>
+          <p>
+            A significant enhancement in this iteration was the introduction of grab functionality. This allowed users to pick up and examine assets at eye level, providing a more accurate perception of object scale. We achieved this using Meta XR Tools' Grab Interaction Building Block and Unity components such as Rigidbody, Grabbable, Grab Interactable, and Grab Hands Interactable scripts.
+          </p>
+          <div class="centered-figure">
+            <img src="assets/5.2 2.png" alt="Configuration of the Components" class="centered-image" />
+            <div class="image-caption">Figure 16: Configuration of the Components.</div>
+          </div>
+          <p>
+            Following a tutorial from Matthew’s slides, we first tested the setup with a sample grab interactable cube. After confirming functionality, we applied the same configuration to other grabbable assets. 
+          </p>
+        </div>
+
+        <div id="sub-section-5-header-3">
+          <h3>5.3 App Functionality: Adding Images</h3>
+          <p>
+            To guide user attention more effectively, we created red arrow graphics using PowerPoint, exported as .png files with transparent backgrounds. Upon importing into Unity, we followed a YouTube tutorial (DA LAB, 2023) to set the texture type to "Sprite (2D and UI)" and integrated them into the scene as UI Image GameObjects. These arrows served as visual markers indicating areas of interest.
+          </p>
+          <video-component 
+          tag="Arrows Added" 
+          source="https://www.youtube.com/embed/bjsRRYWzpG4"
+          subtitle="Arrows Added Video"
+          ></video-component>
+          <div class="centered-figure">
+            <img src="assets/5.3 1.png" alt="Red Arrow" class="centered-image" />
+            <div class="image-caption">Figure 17: The red arrow created in PowerPoint to help point out important parts of the scene.</div>
+          </div>
+          <div class="centered-figure">
+            <img src="assets/5.3 2.png" alt="Changing Png File Texture" class="centered-image" />
+            <div class="image-caption">Figure 18: Changing the .png file’s texture type to “Sprite (2D and UI)” in order for it to be added to an Image GameObject.</div>
+          </div>
+          <p>
+            Following a tutorial from Matthew’s slides, we first tested the setup with a sample grab interactable cube. After confirming functionality, we applied the same configuration to other grabbable assets. 
+          </p>
+        </div>
+
+          <div id="section-header-3">
+            <h2>3. VR Application Development – Iteration 1</h2>
+          </div>
+    
+          <div id="sub-section-3-header-1">
+            <h3>3.1 Application Flow</h3>
+            <p>
+              The application was initially structured such that each interaction question resided within its own Unity scene. These scenes were linked via a C# script that managed navigation using button-triggered scene transitions. However, this approach significantly increased the application’s file size and resulted in long build times – approximately ten minutes per build – which impeded rapid prototyping.
+            </p>
+          </div>
+
 
           <video-component 
           tag="VR Video 2" 
