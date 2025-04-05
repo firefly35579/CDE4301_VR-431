@@ -749,6 +749,71 @@ Furthermore, we would like to express our deepest thanks to all the users who to
           </p>
         </div>
 
+        <div id="sub-section-5-header-4">
+          <h3>5.4 App Functionality: Adding Sound Effects </h3>
+          <p>
+            To compensate for the absence of haptic feedback, we introduced sound effects (SFX) for common interactions. Royalty-free audio files were sourced from Pixabay and imported into Unity. 
+          </p>
+          <div class="centered-figure">
+            <img src="assets/5.4 1.png" alt="Adding Audio Files" class="centered-image" />
+            <div class="image-caption">Figure 19: Adding the audio files to the hierarchy to enable the incorporation of SFX upon button interaction.</div>
+          </div>
+          <p>
+            Within the XR Simple Interactable component, we configured the "Interactable Events" menu to trigger AudioSource.Play() upon button selection.
+          </p>
+          <div class="centered-figure">
+            <img src="assets/5.4 2.png" alt="Configuration of the Components" class="centered-image" />
+            <div class="image-caption">Figure 20: Configuring the playing of SFX using XR Simple Interactable.</div>
+          </div>
+          <p>
+            Following a tutorial from Matthew’s slides, we first tested the setup with a sample grab interactable cube. After confirming functionality, we applied the same configuration to other grabbable assets. 
+          </p>
+        </div>
+
+        <div id="sub-section-5-header-5">
+          <h3>5.5 User Study Phase 3: Test – Asset Improvement</h3>
+          <p>
+            To enhance the realism of the test environment, we replaced the red crepe paper previously used to simulate blood loss with printed images of the actual VR assets at life-size scale. This improved alignment between virtual and physical representations.
+          </p>
+          <div class="centered-figure">
+            <img src="assets/5.5 1.jpg" alt="Printed Out Images" class="centered-image" />
+            <div class="image-caption">Figure 21: The more visually accurate revised assets, created using printed-out images. </div>
+          </div>
+        </div>
+
+        <div id="sub-section-5-header-6">
+          <h3>5.6 Iteration 3 Walkthrough</h3>
+          <video-component 
+          tag="Iteration 3" 
+          source="https://youtu.be/embed/FyXl4VxQYBI"
+          subtitle="Iteration 3"
+          ></video-component>
+          <p>
+            A walkthrough of our third iteration with all of the above improvements incorporated is as shown.
+          </p>
+        </div>
+
+        <div id="sub-section-5-header-7">
+          <h3>5.7 User Study Round 2</h3>
+          <p>
+            The second user study included five participants: two working adults (ages 49 and 59) and three students (ages 17, 20, and 24). All participants reported limited prior experience with VR and minimal medical knowledge.
+          </p>
+          <div class="centered-figure">
+            <img src="assets/5.7.jpg" alt="User Study Round 2" class="centered-image" />
+            <div class="image-caption">Figure 22: The users who took part in the second round of our user study.</div>
+          </div>
+        </div>
+
+        <div id="sub-section-5-header-7-1">
+          <h3>5.7.1 App Design Feedback</h3>
+          <p>
+            Participants appreciated being able to view life-sized assets in VR, but struggled to associate them with their real-world equivalents. They suggested including to-scale images of familiar everyday objects to provide relatable size references.
+          </p>
+          <p>
+            Additionally, although the grabbing feature increased engagement, users stopped using it once they realised it wasn’t essential to task completion. While they acknowledged the utility of the grab function for understanding object scale (especially for distant assets like the large floor spill), they recommended designing tasks that require asset interaction to ensure meaningful use of this feature.
+          </p>
+        </div>
+
           <div id="section-header-3">
             <h2>3. VR Application Development – Iteration 1</h2>
           </div>
@@ -760,28 +825,6 @@ Furthermore, we would like to express our deepest thanks to all the users who to
             </p>
           </div>
 
-
-          <video-component 
-          tag="VR Video 2" 
-          source="https://youtu.be/embed/C9vL3Ym4IdQ"
-          subtitle="Iteration 2"
-      ></video-component>
-          
-          <video-component 
-          tag="VR Video 3" 
-          source="https://youtu.be/embed/qo9Jh0-pVxc"
-          subtitle="Iteration 3"
-      ></video-component>
-
-          <video-component 
-          tag="VR Video 4" 
-          source="https://www.youtube.com/embed/0T2rt3Yr6hI"
-          subtitle="Iteration 4"
-      ></video-component>
-
-          <p>
-            These results are anticipated to validate VR’s transformative potential as a tool for advancing cognitive adaptability in medical education. The structured application of Polya’s Problem-Solving Framework within the VR simulations reinforces systematic thinking, enabling participants to apply theoretical knowledge in a methodical and pragmatic manner. Unlike passive learning environments, VR engages learners actively, bridging the gap between theory and practice (Tene et al., 2024).
-          </p>
         </div>
       </div>
   
@@ -789,52 +832,74 @@ Furthermore, we would like to express our deepest thanks to all the users who to
       <sl-divider></sl-divider>
       <div>
         <div id="section-header-6">
-          <h2>6. Challenges and Mitigation Strategies</h2>
+          <h2>6. VR Application Development – Iteration 4</h2>
         </div>
   
         <div id="sub-section-6-header-1">
-          <h3>6.1 Addressing the Novelty Effect</h3>
+          <h3>6.1 Summary of Feedback and Improvements</h3>
           <p>
-            The novelty effect refers to the initial cognitive overload and distraction learners may experience when first interacting with new technologies like VR. This effect can divert focus from learning objectives to navigating the unfamiliar technology, thereby diminishing educational outcomes (Miguel-Alonso et al., 2024). To mitigate this challenge, a multi-faceted approach will be employed:
+            In response to user feedback from Iteration 3, Iteration 4 introduced several refinements to improve realism, user engagement, and instructional clarity.
           </p>
-        
-          <ul>
-            <li>
-              <strong>Comprehensive Pre-Exposure Training:</strong> A step-by-step tutorial will introduce participants to the VR interface and mechanics, ensuring a seamless transition into the simulation. This preparatory phase will include hands-on practice to familiarise users with navigation, controls, and system interactions, reducing anxiety and cognitive strain.
-            </li>
-            <li>
-              <strong>Incremental Immersion Strategy:</strong> The VR simulation will be structured progressively, starting with basic, low-stakes interactions such as clicking a simple button and gradually advancing to more complex interactions such as following a set of guiding hands. This scaffolding approach ensures learners build confidence and competence without feeling overwhelmed.
-            </li>
-            <li>
-              <strong>Ongoing Facilitator Support:</strong> Dedicated facilitators will be available throughout the simulation sessions to provide real-time assistance, address technical issues, and refocus participants on the educational objectives. Their presence ensures continuous engagement and minimises interruptions.
-            </li>
-          </ul>
-        
-          <p>
-            These measures not only mitigate the novelty effect but also enhance participants’ readiness to engage deeply with the content, allowing the VR experience to serve as a robust learning platform.
-          </p>
+          <div class="centered-figure">
+            <img src="assets/6.1.jpg" alt="Feedback Table" class="centered-image" />
+          </div>
         </div>
-  
+
         <div id="sub-section-6-header-2">
-          <h3>6.2 Resource Constraints</h3>
+          <h3>6.2 Learning Material Development: Inclusion of Common Real-Life Objects to Enhance Understanding of Scale</h3>
           <p>
-            The development and deployment of VR simulations pose resource challenges, including high costs, extensive time commitments, and the need for technical expertise. To address these constraints, the following mitigation strategies will be employed:
+            To support user interpretation of object scale in VR, we researched everyday objects with dimensions comparable to our VR assets. Using PowerPoint, we created vector images of these objects and integrated them into the "Learn" phase of the application.
           </p>
-        
-          <ul>
-            <li>
-              <strong>Strategic Institutional Partnerships:</strong> A close collaborative relationship has been established with the Obstetrics & Gynaecology Department at National University of Singapore Yong Loo Lin School of Medicine to help ensure that our pedagogical approach aligns with industry standards.
-            </li>
-            <li>
-              <strong>Leveraging Existing Resources:</strong> Instead of creating a VR simulation from scratch, the study will adapt existing VR simulations available to us. This approach reduces development costs and accelerates deployment while ensuring reliability and user-friendliness.
-            </li>
-          </ul>
-        
-          <p>
-            By adopting these measures, the study ensures efficient utilisation of resources while maintaining the high quality and relevance of the VR simulations.
-          </p>
-  
+          <div class="centered-figure">
+            <img src="assets/6.1.jpg" alt="Feedback Table" class="centered-image" />
+          </div>
         </div>
+
+  
+        <div id="sub-section-6-header-3">
+          <h3>6.3 App Functionality: Object Collider</h3>
+          <p>
+            We introduced a new object collider mechanism in the "Learn" phase. Users are required to grab each asset and touch it to its corresponding real-life object image. Upon collision, a success sound effect is triggered and a "Next" button is activated, allowing the user to proceed.
+          </p>
+          <p>
+            This functionality was implemented using a custom C# script featuring serialized fields for easy assignment of audio files and target GameObjects. 
+          </p>
+          <div class="centered-figure">
+            <img src="assets/6.3 1.png" alt="Custom C# Script for Audio" class="centered-image" />
+            <div class="image-caption">Figure 23: The custom C# script written to play an audio clip and activate the “Next” button GameObject upon object collision.</div>
+          </div>
+          <p>
+            Assets were tagged as "Asset" to ensure only the intended objects triggered the interaction logic.
+          </p>
+          <div class="centered-figure">
+            <img src="assets/6.3 2.png" alt="Differentiation" class="centered-image" />
+            <div class="image-caption">Figure 24: Changing the desired assets’ tags to ‘Asset’ to differentiate them from other assets and ensure that only the desired assets are able to trigger the collision effects.</div>
+          </div>     
+        </div>
+
+        <div id="sub-section-6-header-4">
+          <h3>6.4 Revised User Study Documents</h3>
+          <p>
+            To maintain content parity, the real-life object references added to the experimental group's VR simulation were also included in the control group's printed learning materials. This ensured consistency across study conditions.
+          </p>
+          <div class="centered-figure">
+            <img src="assets/6.1.jpg" alt="Feedback Table" class="centered-image" />
+            <div class="image-caption">Figure 25: The revised ‘Phase 1’ document provided to control group participants, with real object references included for better visualisation of scale.</div>
+          </div>
+        </div>
+
+        <div id="sub-section-6-header-5">
+          <h3>6.5 Iteration 4 Walkthrough</h3>
+          <p>
+            A video of the walkthrough of our fourth iteration, incorporating the above improvements, is as shown. 
+          </p>
+          <video-component 
+          tag="Iteration 4" 
+          source="https://www.youtube.com/embed/=x2cibjXlC5k"
+          subtitle="Iteration 4"
+          ></video-component>
+        </div>
+
       </div>
   
       <br />
