@@ -58,7 +58,7 @@ const images = [
   function updateImage(index) {
     galleryImage.src = images[index];
     galleryImage.alt = `Storyboard Frame ${index + 1}`;
-    galleryCaption.textContent = `Step ${index + 1} of ${images.length}`;
+    galleryCaption.textContent = `${index + 1} of ${images.length}`;
   }
   
   // Event listeners for navigation buttons
@@ -221,3 +221,36 @@ vrNextButton.addEventListener("click", () => {
 // Initialize the VR storyboard gallery
 updateVRImage(vrCurrentIndex);
 
+// Reference Gallery Images
+const referenceImages = [
+  "assets/Reference Image 1.jpg",
+  "assets/Sanitary Towel Reference Image.jpg",
+  "assets/Swab Reference Image.jpg",
+  "assets/IncoSheet Reference Image.jpg",
+  "assets/Blood Spill Reference Image.jpg"
+];
+
+let referenceCurrentIndex = 0;
+
+const referenceGalleryImage = document.getElementById("gallery-image-reference");
+const referencePrevButton = document.getElementById("prev-reference");
+const referenceNextButton = document.getElementById("next-reference");
+const referenceGalleryCaption = document.getElementById("gallery-caption-reference");
+
+function updateReferenceImage(index) {
+  referenceGalleryImage.src = referenceImages[index];
+  referenceGalleryImage.alt = `Reference Frame ${index + 1}`;
+  referenceGalleryCaption.textContent = `${index + 1} of ${referenceImages.length}`;
+}
+
+referencePrevButton.addEventListener("click", () => {
+  referenceCurrentIndex = (referenceCurrentIndex - 1 + referenceImages.length) % referenceImages.length;
+  updateReferenceImage(referenceCurrentIndex);
+});
+
+referenceNextButton.addEventListener("click", () => {
+  referenceCurrentIndex = (referenceCurrentIndex + 1) % referenceImages.length;
+  updateReferenceImage(referenceCurrentIndex);
+});
+
+updateReferenceImage(referenceCurrentIndex);
