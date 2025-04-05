@@ -486,7 +486,7 @@ Furthermore, we would like to express our deepest thanks to all the users who to
           </p>
           <video-component 
           tag="VR Video 1" 
-          source="https://youtu.be/embed/M-aJXEX1Msw"
+          source="https://youtu.be/embed/qo9Jh0-pVxc"
           subtitle="Iteration 1"
           ></video-component>
         </div>
@@ -507,7 +507,7 @@ Furthermore, we would like to express our deepest thanks to all the users who to
           <h3>3.7.1 Usability Feedback</h3>
           <video-component 
           tag="Z-fighting" 
-          source="https://youtu.be/embed/M-aJXEX1Msw"
+          source="https://youtu.be/embed/1j4HGfP6lc4"
           subtitle="Z-fighting Clip"
           ></video-component>
           <p>
@@ -579,49 +579,19 @@ Furthermore, we would like to express our deepest thanks to all the users who to
         </div>
 
         <div id="sub-section-4-header-2">
-          <h3>4.2 Participant Selection Criteria</h3>
+          <h3>4.2 Improved User Study Plan</h3>
           <p>
-            To ensure the validity, generalizability, and reliability of the study, a carefully designed participant selection process was implemented. The selection criteria were developed to balance inclusivity with relevance to the research objectives, while controlling for potential confounding variables.
+            Our user study flow is as depicted in the following flowchart.
           </p>
-          <h4>Inclusion Criteria</h4>
-          <ul>
-            <li>
-              <strong>Medical Education Enrollment:</strong> Currently enrolled in an undergraduate or postgraduate medical program, ensuring foundational knowledge of anatomy, physiology, and emergency medicine concepts.
-            </li>
-            <li>
-              <strong>English Proficiency:</strong> Proficiency in English, as the VR interface, instructions, and assessments were administered in English.
-            </li>
-          </ul>
-        
-          <h4>Exclusion Criteria</h4>
-          <ul>
-            <li>
-              <strong>Physical or Sensory Limitations:</strong> Conditions such as severe visual or motor impairments that could hinder interaction with the VR system.
-            </li>
-            <li>
-              <strong>Pregnancy or Health Risks:</strong> Pregnant individuals or those with health conditions contraindicated for VR use were excluded for safety reasons.
-            </li>
-            <li>
-              <strong>Concurrent Emergency Medicine Training:</strong> Participants currently undergoing intensive emergency medicine rotations or specialised training in PPH management were excluded to maintain uniformity in baseline knowledge and experience levels.
-            </li>
-          </ul>
-        
-          <h4>Ethical Considerations</h4>
+
+          <div class="centered-figure">
+            <img src="assets/4.2 1.png" alt="User Study Flow" class="centered-image" />
+            <div class="image-caption">Figure 10: The flowchart used to brief our participants on what to expect during the user study.</div>
+          </div>
+
           <p>
-            Written informed consent was secured from all participants after a thorough explanation of the study’s purpose, procedures, risks, and benefits. Participants were assured of:
-          </p>
-          <ul>
-            <li>
-              <strong>Anonymity:</strong> All data were anonymized to protect participant identities.
-            </li>
-            <li>
-              <strong>Voluntary Participation:</strong> Participants could withdraw from the study at any stage without penalty.
-            </li>
-            <li>
-              <strong>Minimal Risk:</strong> The study was designed to mitigate risks, including motion sickness and stress from VR simulations, with facilitators available for immediate support.
-            </li>
-          </ul>
-          
+            Both control and experimental groups followed an identical three-phase structure: Learn → Practice → Test. The instructional materials used in the control group's "Learn" phase were carefully aligned with the content delivered in the experimental group's VR experience. Similarly, the practice activities were standardised across both groups to ensure comparability
+          </p>          
         </div>
   
         <div id="sub-section-4-header-3">
@@ -794,27 +764,39 @@ Furthermore, we would like to express our deepest thanks to all the users who to
       <div>
         <div id="section-header-7">
           <h2>7. Results & Analysis</h2>
+        </div>
+        <div id="sub-section-7-header-1">
+          <h3>7.1 Results</h3>
+        </div>
           <p>
-            By addressing critical gaps in current literature, the research focuses on collecting quantitative data that underscores VR’s potential to bridge the gap between theoretical learning and practical application, providing empirical evidence on its effectiveness in improving decision-making under pressure.
+            Below is our Table of Results of our User Studies:
           </p>
           <div class="centered-figure">
             <img src="assets/Results Table.jpg" alt="Results Table" class="large-image" />
-            <div class="image-caption">Figure 1: User Study Results Table</div>
           </div>
           <p>
-            You may download the user test results below:
+            You may view or download the user test results below:
           </p>
-          <a href="https://raw.githubusercontent.com/firefly35579/CDE4301_VR-431/main/assets/VR User Test Results.xlsx" download>Download the User Test Results</a>
-          
-          
+  <a href="https://raw.githubusercontent.com/firefly35579/CDE4301_VR-431/main/assets/VR User Test Results.xlsx" download>Download the Excel File</a>
+
+  <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://raw.githubusercontent.com/firefly35579/CDE4301_VR-431/main/assets/VR%20User%20Test%20Results.xlsx"
+    width="100%" height="600px" frameborder="0"></iframe>  
+    
+          <p>
+            We managed to conduct a total of 16 user studies. The participants mainly consisted of university peers as well as researchers from the Immersive Reality Lab. The level of prior VR experience was mostly minimal besides the researchers, while the level of prior relevant medical experience was minimal for all the users, i.e. none had significant knowledge of PPH or blood loss estimation prior to the user study. The users were timed to ensure they did not take more than 5 minutes for either the learning phase or the practice phase. 
+          </p>
+          <p>
+            To have a measure of how accurate our users were, we decided to quantify their mistakes made as a percentage of the total number of questions they were tested on, a mistake being a deviation of more than 200 mL from the correct answer. These are highlighted in red in the table. Additionally, if a response was very far off, i.e. a large mistake, they were highlighted as well. If the volume of blood loss was underestimated by 400 mL or more it was highlighted in orange, and if it was overestimated by 400 mL or more it was highlighted in yellow.
+          </p>
+          <p>
+            A few other metrics were also calculated, namely the average answered volume of blood loss for each test question, the number of users that made a mistake for each question, as well as the number of users that made a large mistake for each question. These will be analysed later in Section 7.2.
+          </p>
+          <p>
+            For the purposes of results analysis, the averages and percentages seen at the bottom of the table only included results from the twelve user studies after iteration 2, i.e. the first four user studies were excluded as they were not tested on the same questions as the subsequent twelve. 
+          </p>
         </div>
   
-        <div id="sub-section-7-header-1">
-          <h3>7.1 Advancement of VR in Medical Training</h3>
-          <p>
-            This study positions VR as a disruptive innovation in medical education, addressing significant limitations of traditional methods, such as limited access to clinical training and the inability to simulate high-risk emergencies in a controlled environment. Leveraging VR’s immersive capabilities, this research aims to demonstrate its ability to enhance experiential learning. The findings are anticipated to extend the discourse on VR’s utility beyond medical education, solidifying its role as a scalable, adaptable teaching medium across diverse disciplines. This aligns closely with constructivist pedagogical frameworks that emphasise experiential and problem-centred learning.
-          </p>
-        </div>
+
   
         <div id="sub-section-7-header-2">
           <h3>7.2 Implications for Curriculum Development</h3>
